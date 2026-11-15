@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Herramientas gratuitas para analizar rentabilidad, contraentrega y anuncios de tiendas online.">
+  <title>Ecommerce Toolkit — Calculadoras gratuitas</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">HERRAMIENTA GRATUITA · CÓDIGO ABIERTO</p>
+      <h1>Ecommerce Toolkit</h1>
+      <p class="intro">Calcula márgenes, entregas contraentrega y resultados de publicidad para tomar mejores decisiones en tu tienda online.</p>
+      <span class="tag">Hecho para emprendedores de ecommerce</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="notice">
+      <strong>Importante:</strong> los resultados son estimaciones basadas en los datos que ingreses. No sustituyen la contabilidad ni garantizan resultados comerciales.
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 · PRODUCTO</p><h2>Calculadora de rentabilidad</h2></div>
+        <p>Descubre cuánto te queda por pedido después de los costos.</p>
+      </div>
+      <div class="fields">
+        <label>Precio de venta (COP)<input id="price" type="number" min="0" value="149900"></label>
+        <label>Costo del producto (COP)<input id="productCost" type="number" min="0" value="68000"></label>
+        <label>Envío asumido por ti (COP)<input id="shipping" type="number" min="0" value="0"></label>
+        <label>Publicidad por pedido (COP)<input id="adCost" type="number" min="0" value="8000"></label>
+        <label>Otros costos por pedido (COP)<input id="otherCost" type="number" min="0" value="0"></label>
+      </div>
+      <div class="results">
+        <div><span>Ganancia estimada</span><strong id="profit">$73.900</strong></div>
+        <div><span>Margen sobre venta</span><strong id="margin">49,3%</strong></div>
+        <div><span>Precio de equilibrio</span><strong id="breakEven">$76.000</strong></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">02 · LOGÍSTICA</p><h2>Calculadora de contraentrega</h2></div>
+        <p>Estima cuántos pedidos llegan a entregarse y el costo de los pedidos no entregados.</p>
+      </div>
+      <div class="fields">
+        <label>Pedidos despachados<input id="sent" type="number" min="0" value="100"></label>
+        <label>Pedidos entregados<input id="delivered" type="number" min="0" value="72"></label>
+        <label>Costo promedio por pedido no entregado (COP)<input id="failedCost" type="number" min="0" value="12000"></label>
+        <label>Ganancia por pedido entregado antes de fallidos (COP)<input id="deliveredProfit" type="number" min="0" value="45000"></label>
+      </div>
+      <div class="results">
+        <div><span>Tasa de entrega</span><strong id="deliveryRate">72,0%</strong></div>
+        <div><span>Pedidos no entregados</span><strong id="failed">28</strong></div>
+        <div><span>Resultado estimado del lote</span><strong id="batchResult">$2.916.000</strong></div>
+      </div>
+      <p class="hint">El resultado resta el costo de los pedidos no entregados a la ganancia indicada para cada pedido entregado.</p>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><p class="eyebrow">03 · PUBLICIDAD</p><h2>Calculadora de anuncios</h2></div>
+        <p>Relaciona inversión, conversaciones y ventas para entender el costo de adquisición.</p>
+      </div>
+      <div class="fields">
+        <label>Inversión publicitaria (COP)<input id="spend" type="number" min="0" value="60000"></label>
+        <label>Conversaciones recibidas<input id="chats" type="number" min="0" value="32"></label>
+        <label>Ventas confirmadas<input id="sales" type="number" min="0" value="4"></label>
+        <label>Valor promedio de venta (COP)<input id="averageOrder" type="number" min="0" value="149900"></label>
+      </div>
+      <div class="results">
+        <div><span>Costo por conversación</span><strong id="costChat">$1.875</strong></div>
+        <div><span>Costo por venta (CPA)</span><strong id="cpa">$15.000</strong></div>
+        <div><span>ROAS estimado</span><strong id="roas">10,0x</strong></div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Ecommerce Toolkit</strong> · Proyecto comunitario de código abierto.</p>
+      <p>Versión inicial. Las cifras se calculan localmente en tu navegador; no se envían a ningún servidor.</p>
+      <p><a href="https://github.com/neays" target="_blank" rel="noreferrer">Perfil del proyecto en GitHub</a></p>
+    </footer>
+  </main>
+  <script src="src/app.js"></script>
+</body>
+</html>
